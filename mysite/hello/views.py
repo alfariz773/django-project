@@ -1,9 +1,11 @@
-from django.urls import path
-from . import views
+from django.shortcuts import render
+from django.shortcuts import redirect
 
-urlpatterns = [
-    path('gallery/', views.gallery, name='gallery'),
-    path('contact/', views.contact, name='contact'),
-]
+def redirect_to_gallery(request):
+    return redirect('gallery')
 
-# Create your views here.
+def gallery(request):
+    return render(request, 'gallery.html')
+
+def contact(request):
+    return render(request, 'contact.html')

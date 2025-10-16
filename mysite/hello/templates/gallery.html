@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% load static %}
     <meta charset="UTF-8">
-    <title>my image gallery</title>
+    <title>My Image Gallery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
 <body>
-    <h1>my gallery</h1>
-    <div class= gallery>
-        <div class=image>
-            <img src="C:\Users\Hp\OneDrive\Pictures\wallhaven-76vv5y_1920x1080.png" alt="image1">
-            <p>image1</p>
+    <h1>My Gallery</h1>
+    <div class="gallery">
+        <div class="image">
+            <img src="{% static 'hello1.jpg' %}" alt="image1" style='width: 300px; height=250px'>
+            <p>Image 1</p>
         </div>
 
-        <div class=image>
-            <img src="C:\Users\Hp\OneDrive\Pictures\🤔°○ LB-Silhouette WORKS GT Lamborghini Miura.jpeg" alt="image2">
-            <p>image2</p>
+        <div class="image">
+            <img src="{% static 'hello2.webp' %}" alt="image2" style='width: 300px; height=250px'>
+            <p>Image 2</p>
         </div>
 
-        <div class=image>
-            <img src="C:\Users\Hp\OneDrive\Pictures\Ichigo kurosaki bleach ishida.jpg" alt="image3">
-            <p>image3</p>
+        <div class="image">
+            <img src="{% static 'hello3.jpeg' %}" alt="image3" style='width: 300px; height=250px'>
+            <p>Image 3</p>
+        </div>
     </div>
+
     <a href="{% url 'contact' %}">Go to Contact Page</a>
-      
 </body>
 </html>
-
-

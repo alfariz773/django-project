@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from hello import views  # Import your view from the hello app
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.gallery, name='gallery'),  # Root URL shows gallery
 ]
